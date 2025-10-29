@@ -35,8 +35,71 @@ Hence we enter round 4.
 
 Now the admin command is also blocked hence we need to use the conactenation operator to use the keyword admin.
 Hence by using the command ad'||'min'; we enter the next round.
+The operator || combines ad and min into admin.
 <img width="904" height="430" alt="image" src="https://github.com/user-attachments/assets/0c4389a1-2fba-4ee0-ab21-319bdae6e78a" />
 <img width="303" height="40" alt="image" src="https://github.com/user-attachments/assets/0d0c6caf-97eb-42bf-910f-a715f471803a" />
 
 
 Hence we enter round 5.
+
+The concat operator is not blocked hence we can use the same command as the previous round.
+<img width="908" height="429" alt="image" src="https://github.com/user-attachments/assets/29a6a67d-0ca6-400a-b7e0-87f08142e5c5" />
+```
+<?php
+session_start();
+
+if (!isset($_SESSION["round"])) {
+    $_SESSION["round"] = 1;
+}
+$round = $_SESSION["round"];
+$filter = array("");
+$view = ($_SERVER["PHP_SELF"] == "/filter.php");
+
+if ($round === 1) {
+    $filter = array("or");
+    if ($view) {
+        echo "Round1: ".implode(" ", $filter)."<br/>";
+    }
+} else if ($round === 2) {
+    $filter = array("or", "and", "like", "=", "--");
+    if ($view) {
+        echo "Round2: ".implode(" ", $filter)."<br/>";
+    }
+} else if ($round === 3) {
+    $filter = array(" ", "or", "and", "=", "like", ">", "<", "--");
+    // $filter = array("or", "and", "=", "like", "union", "select", "insert", "delete", "if", "else", "true", "false", "admin");
+    if ($view) {
+        echo "Round3: ".implode(" ", $filter)."<br/>";
+    }
+} else if ($round === 4) {
+    $filter = array(" ", "or", "and", "=", "like", ">", "<", "--", "admin");
+    // $filter = array(" ", "/**/", "--", "or", "and", "=", "like", "union", "select", "insert", "delete", "if", "else", "true", "false", "admin");
+    if ($view) {
+        echo "Round4: ".implode(" ", $filter)."<br/>";
+    }
+} else if ($round === 5) {
+    $filter = array(" ", "or", "and", "=", "like", ">", "<", "--", "union", "admin");
+    // $filter = array("0", "unhex", "char", "/*", "*/", "--", "or", "and", "=", "like", "union", "select", "insert", "delete", "if", "else", "true", "false", "admin");
+    if ($view) {
+        echo "Round5: ".implode(" ", $filter)."<br/>";
+    }
+} else if ($round >= 6) {
+    if ($view) {
+        highlight_file("filter.php");
+    }
+} else {
+    $_SESSION["round"] = 1;
+}
+
+// picoCTF{y0u_m4d3_1t_79a0ddc6}
+?>
+```
+
+### SOLVE: 
+***FLAG:***: picoCTF{y0u_m4d3_1t_79a0ddc6}
+
+## Concepts learnt:
+I learnt various sql command and how to bypass a login page using admin access.
+
+## Resources:
+None.
