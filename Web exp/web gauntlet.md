@@ -18,7 +18,18 @@ I used the command admin' /* which is used to bypass a web application's login f
 This finds the database record for the admin user.
 /*: This is the multi-line comment syntax that causes the rest of the query to be ignored. 
 
+
 <img width="902" height="422" alt="image" src="https://github.com/user-attachments/assets/78a9ac3c-dcba-4243-be1b-90ec47aacc91" />
 <img width="206" height="39" alt="image" src="https://github.com/user-attachments/assets/ffd9447a-e537-4cd1-8c24-acf69eaf04a5" />
 
+
 Hence we enter round 3. 
+
+Now since most of the commands like =, --, >, < are blocked we use the termination command ';'.
+Hence by using the command admin'; we enter the next round.
+
+<img width="912" height="433" alt="image" src="https://github.com/user-attachments/assets/9543ee96-925e-42ca-ae0e-d171f260b3fd" />
+<img width="240" height="27" alt="image" src="https://github.com/user-attachments/assets/1e9b2dc3-a8f3-494d-88e5-dd341244ab99" />
+
+Hence we enter round 4.
+
