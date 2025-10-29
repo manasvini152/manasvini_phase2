@@ -14,3 +14,11 @@ The double-hyphen (--) is the SQL syntax for a comment. This tells the database 
 
 Hence we enter round 2.
 
+I used the command admin' /* which is used to bypass a web application's login form and gain unauthorized access to an account.
+This finds the database record for the admin user.
+/*: This is the multi-line comment syntax that causes the rest of the query to be ignored. 
+
+<img width="902" height="422" alt="image" src="https://github.com/user-attachments/assets/78a9ac3c-dcba-4243-be1b-90ec47aacc91" />
+<img width="206" height="39" alt="image" src="https://github.com/user-attachments/assets/ffd9447a-e537-4cd1-8c24-acf69eaf04a5" />
+
+Hence we enter round 3. 
