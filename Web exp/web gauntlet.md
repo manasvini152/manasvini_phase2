@@ -33,3 +33,10 @@ Hence by using the command admin'; we enter the next round.
 
 Hence we enter round 4.
 
+Now the admin command is also blocked hence we need to use the conactenation operator to use the keyword admin.
+Hence by using the command ad'||'min'; we enter the next round.
+<img width="904" height="430" alt="image" src="https://github.com/user-attachments/assets/0c4389a1-2fba-4ee0-ab21-319bdae6e78a" />
+<img width="303" height="40" alt="image" src="https://github.com/user-attachments/assets/0d0c6caf-97eb-42bf-910f-a715f471803a" />
+
+
+Hence we enter round 5.
